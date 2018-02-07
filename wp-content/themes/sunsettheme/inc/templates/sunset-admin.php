@@ -8,6 +8,7 @@ $about = esc_attr(get_option('about_me'));
 $twitter = esc_attr(get_option('twitter_handler'));
 $facebook = esc_attr(get_option('facebook_handler'));
 $gplus = esc_attr(get_option('gplus_handler'));
+$picture = esc_attr(get_option('profile_picture'));
 ?>
 <form action="options.php" method="post" class="sunset-general-form">
     <?php settings_fields('sunset-settings-group'); ?>
@@ -22,6 +23,10 @@ $gplus = esc_attr(get_option('gplus_handler'));
         <h1 class="sunset-username">Fill In Your Profile</h1>
         <h2 class="sunset-description">Awaiting Saved Changes</h2>
     <?php else : ?>
+    <div class="image-container">
+        <div id="profile-picture-preview" class="profile-picture" style="background-image: url(<?php echo $picture; ?>);">
+        </div>
+    </div>
     <div class="sunset-sidebar">
         <h1 class="sunset-username"><?php echo $fullName; ?></h1>
         <h2 class="sunset-description"><?php echo $about; ?></h2>

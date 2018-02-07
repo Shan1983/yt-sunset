@@ -64,6 +64,7 @@ function sunset_custom_settings()
     /**
      * register database fields
      */
+    register_setting('sunset-settings-group', 'profile_picture');
     register_setting('sunset-settings-group', 'first_name', 'sunset_sanitize_first_name_handler');
     register_setting('sunset-settings-group', 'about_me', 'sunset_sanitize_about_me_handler');
     register_setting('sunset-settings-group', 'last_name', 'sunset_sanitize_last_name_handler');
@@ -79,6 +80,17 @@ function sunset_custom_settings()
         'Sidebar Options',
         'sunset_sidebar_options',
         'alecaddd_sunset'
+    );
+
+    /**
+     * Profile Picture
+     */
+    add_settings_field(
+        'sidebar-profile-picture',
+        'Profile Picture',
+        'sunset_sidebar_profile_picture',
+        'alecaddd_sunset',
+        'sunset-sidebar-options'
     );
 
     /**
@@ -149,6 +161,13 @@ add_action('admin_menu', 'sunset_add_admin_page');
 function sunset_sidebar_options()
 {
     echo 'customise your sidebar infomation';
+}
+
+function sunset_sidebar_profile_picture()
+{
+    $picture = esc_attr(get_option('profile_picture'));
+    echo '<input id="profile-picture" type="hidden" name="profile_picture" value="' . $picture . '"  />';
+    echo '<input type="button" value="Upload" class="button button-primary" id="upload-button"  />';
 }
 
 function sunset_sidebar_name()
