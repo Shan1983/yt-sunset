@@ -1,4 +1,4 @@
-<h1><?php bloginfo(); ?> Theme Options</h1>
+<h1><?php bloginfo(); ?> Sidebar Options</h1>
 <?php settings_errors(); ?>
 <?php
 $firstName = esc_attr(get_option('first_name'));
