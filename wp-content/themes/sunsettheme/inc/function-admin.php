@@ -65,6 +65,7 @@ function sunset_custom_settings()
      * register database fields
      */
     register_setting('sunset-settings-group', 'first_name', 'sunset_sanitize_first_name_handler');
+    register_setting('sunset-settings-group', 'about_me', 'sunset_sanitize_about_me_handler');
     register_setting('sunset-settings-group', 'last_name', 'sunset_sanitize_last_name_handler');
     register_setting('sunset-settings-group', 'twitter_handler', 'sunset_sanitize_twitter_handler');
     register_setting('sunset-settings-group', 'facebook_handler', 'sunset_sanitize_facebook_handler');
@@ -87,6 +88,17 @@ function sunset_custom_settings()
         'sidebar-name',
         'Full Name',
         'sunset_sidebar_name',
+        'alecaddd_sunset',
+        'sunset-sidebar-options'
+    );
+
+    /**
+     * About Me
+     */
+    add_settings_field(
+        'sidebar-about',
+        'About Me',
+        'sunset_sidebar_about',
         'alecaddd_sunset',
         'sunset-sidebar-options'
     );
@@ -148,6 +160,13 @@ function sunset_sidebar_name()
     echo '<p class=description">This will display your full name in the side bar menu</p>';
 }
 
+function sunset_sidebar_about()
+{
+    $about = esc_attr(get_option('about_me'));
+    echo '<input type="text" size="43" name="about_me" value="' . $about . '" placeholder="About Myself" />';
+    echo '<p class=description">This will display a short description about yourself, in the side bar menu</p>';
+}
+
 function sunset_sidebar_twitter()
 {
     $twitter = esc_attr(get_option('twitter_handler'));
@@ -173,6 +192,12 @@ function sunset_sidebar_gplus()
  * Santize Custom Fields
  */
 function sunset_sanitize_first_name_handler($input)
+{
+    $output = sanitize_text_field($input);
+    return $output; // always return, never echo!
+}
+
+function sunset_sanitize_about_me_handler($input)
 {
     $output = sanitize_text_field($input);
     return $output; // always return, never echo!
