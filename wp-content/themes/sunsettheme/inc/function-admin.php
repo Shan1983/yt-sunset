@@ -84,7 +84,9 @@ function sunset_custom_settings()
     /**
      * Theme Support Options
      */
-    register_setting('sunset-theme-support', 'post_formats', 'sunset_post_format_callback');
+    register_setting('sunset-theme-support', 'post_formats');
+    register_setting('sunset-theme-support', 'custom_header');
+    register_setting('sunset-theme-support', 'custom_background');
 
     /**
      * Setup New Section
@@ -191,6 +193,35 @@ function sunset_custom_settings()
         'sunset-theme-options'
     );
 
+    add_settings_field(
+        'message-message',
+        'Below Customizations',
+        'sunset_theme_options_info',
+        'alecaddd_sunset_theme',
+        'sunset-theme-options'
+    );
+
+    add_settings_field(
+        'custom-header',
+        'Custom Header',
+        'sunset_custom_header',
+        'alecaddd_sunset_theme',
+        'sunset-theme-options'
+    );
+
+    add_settings_field(
+        'custom-background',
+        'Custom Background',
+        'sunset_custom_background',
+        'alecaddd_sunset_theme',
+        'sunset-theme-options'
+    );
+
+    /**
+     * ===================================================
+     * end theme options
+     */
+
 }
 
 /**
@@ -209,8 +240,14 @@ function sunset_sidebar_options()
 function sunset_sidebar_profile_picture()
 {
     $picture = esc_attr(get_option('profile_picture'));
-    echo '<input id="profile-picture" type="hidden" name="profile_picture" value="' . $picture . '"  />';
-    echo '<input type="button" value="Upload" class="button button-primary" id="upload-button"  />';
+    if (empty($picture)) {
+        echo '<input id="profile-picture" type="hidden" name="profile_picture" value=""  />';
+        echo '<input type="button" value="Upload" class="button button-primary" id="upload-button"  />';
+    } else {
+        echo '<input id="profile-picture" type="hidden" name="profile_picture" value="' . $picture . '"  />';
+        echo '<input type="button" value="Update" class="button button-primary" id="upload-button"  />';
+        echo '<input type="button" class="button button-secondary" value="Remove" id="remove-picture" />';
+    }
 }
 
 function sunset_sidebar_name()
@@ -303,14 +340,14 @@ function sunset_theme_create_page()
 /**
  * Support Page
  */
+function sunset_theme_options_info()
+{
+    echo 'Activating Custom Header and/or Custom Background will add new menu\'s to the Appearence panel.';
+}
+
 function sunset_theme_support_page()
 {
     require_once(get_template_directory() . '/inc/templates/sunset-theme-support.php');
-}
-
-function sunset_post_format_callback($input)
-{
-    return $input;
 }
 
 function sunset_theme_options()
@@ -329,6 +366,21 @@ function sunset_post_formats()
     }
 
     echo $output;
+}
+
+function sunset_custom_header()
+{
+    $options = get_option('custom_header');
+    $checked = (@$options == 1 ? 'checked' : '');
+    echo '<label><input type="checkbox" id="custom_header" name="custom_header" value="1" ' . $checked . ' />Activate</label>';
+}
+
+function sunset_custom_background()
+{
+    $options = get_option('custom_background');
+    $checked = (@$options == 1 ? 'checked' : '');
+    echo '<label><input type="checkbox" id="custom_background" name="custom_background" value="1" ' . $checked . ' />Activate</label>';
+
 }
 
 

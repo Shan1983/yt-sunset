@@ -13,7 +13,7 @@ $picture = esc_attr(get_option('profile_picture'));
 <form action="options.php" method="post" class="sunset-general-form">
     <?php settings_fields('sunset-settings-group'); ?>
     <?php do_settings_sections('alecaddd_sunset'); ?>
-    <?php submit_button(); ?>
+    <?php submit_button('Save Changes', 'primary', 'btnSubmit'); ?>
 </form>
 <div class="sunset-sidebar-top-preview">
     <h2 class="this-preview">- Profile Preview -</h2>
