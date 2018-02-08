@@ -50,6 +50,15 @@ function sunset_add_admin_page()
 
     add_submenu_page(
         'alecaddd_sunset',
+        'Sunset Contact Form',
+        'Contact Form',
+        'manage_options',
+        'alecaddd_sunset_theme_contact',
+        'sunset_contact_form_page'
+    );
+
+    add_submenu_page(
+        'alecaddd_sunset',
         'Sunset CSS Options',
         'Custom CSS',
         'manage_options',
@@ -89,6 +98,11 @@ function sunset_custom_settings()
     register_setting('sunset-theme-support', 'custom_background');
 
     /**
+     * Contact Form Options
+     */
+    register_setting('sunset-contact-options', 'activate_contact');
+
+    /**
      * Setup New Section
      */
     add_settings_section(
@@ -103,6 +117,13 @@ function sunset_custom_settings()
         'Theme Options',
         'sunset_theme_options',
         'alecaddd_sunset_theme'
+    );
+
+    add_settings_section(
+        'sunset-contact-section',
+        'Contact Form',
+        'sunset_contact_section',
+        'alecaddd_sunset_theme_contact'
     );
 
     /**
@@ -222,6 +243,19 @@ function sunset_custom_settings()
      * end theme options
      */
 
+    /**
+     * ===================================================
+     * Contact Form Options
+     */
+
+    add_settings_field(
+        'activate-form',
+        'Activate Contact Form',
+        'sunset_activate_contact',
+        'alecaddd_sunset_theme_contact',
+        'sunset-contact-section'
+    );
+
 }
 
 /**
@@ -335,6 +369,29 @@ function sunset_sanitize_gplus_handler($input)
 function sunset_theme_create_page()
 {
     require_once(get_template_directory() . '/inc/templates/sunset-admin.php');
+}
+
+/**
+ * Contact Form options
+ */
+function sunset_contact_section()
+{
+    echo 'Activate this themes contact form. ';
+    echo 'Leave this unactivated<br>if you wish to use a different contact form plugin.';
+}
+
+function sunset_contact_form_page()
+{
+    require_once(get_template_directory() . '/inc/templates/sunset-contact-form.php');
+}
+
+
+function sunset_activate_contact()
+{
+    //@ makes sure it exists
+    $options = get_option('activate_contact');
+    $checked = (@$options == 1 ? 'checked' : '');
+    echo '<label><input type="checkbox" id="custom_header" name="activate_contact" value="1" ' . $checked . ' />Activate</label>';
 }
 
 /**
