@@ -85,6 +85,11 @@ function sunset_load_scripts()
         'all'
     );
 
+    wp_enqueue_style(
+        'raleway-font',
+        '//fonts.googleapis.com/css?family=Raleway:200,300,500'
+    );
+
     /**
      * load jQuery in footer
      */
