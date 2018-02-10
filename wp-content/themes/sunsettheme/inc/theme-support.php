@@ -27,6 +27,8 @@ if (@$background == 1) {
     add_theme_support('custom-background');
 }
 
+add_theme_support('post-thumbnails');
+
 /**
  * Activate Nav menu options
  */
@@ -35,3 +37,52 @@ function sunset_register_nav_menu()
     register_nav_menu('primary', 'Header Navigation Menu');
 }
 add_action('after_setup_theme', 'sunset_register_nav_menu');
+
+/**
+ * Blog loop custom functions
+ */
+function sunset_posted_meta()
+{
+    $posted_on = human_time_diff(get_the_time('U'), current_time('timestamp'));
+    $categories = get_the_category();
+    $separator = ', ';
+    $output = '';
+    $i = 1;
+
+    if (!empty($categories)) {
+        foreach ($categories as $cat) {
+            if ($i > 1) {
+                $output .= $separator;
+            }
+            $output .= '<a href="' . esc_url(get_category_link($cat->term_id)) . '" alt="' . esc_attr('View all posts in%s', $cat->name) . '">' . esc_html($cat->name) . '</a>';
+            $i++;
+        }
+    }
+
+    return '<span class="posted-on">Posted <a href="' . esc_url(get_permalink()) . '">' . $posted_on . '</a> ago / </span><span class="posted-in">' . $output . '</span>';
+}
+
+function sunset_posted_footer()
+{
+    $comments_num = get_comments_number();
+
+    if (comments_open()) {
+        if ($comments_num == 0) {
+            $comments = __('No Comments');
+        } else if ($comments_num > 1) {
+            $comments = $comments_num . __(' Comments');
+        } else {
+            $comments = __('1 Comment');
+        }
+        $comments = '<a href="' . get_comments_link() . '">' . $comments . '<span class="sunset-icon sunset-comment"></span></a>';
+    } else {
+        $comments = __('Comments are closed');
+    }
+
+    return '<div class="post-footer-container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-6">' . get_the_tag_list('<div class="tags-list"><span class="sunset-icon sunset-tag"></span>', ' ', '</div>') . '</div>
+    <div class="col-xs-12 col-sm-6">' . $comments . '</div>
+    </div>
+    </div>';
+}
