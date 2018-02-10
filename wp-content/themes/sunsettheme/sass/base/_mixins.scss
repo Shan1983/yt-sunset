@@ -1,0 +1,10 @@
+/*
+	Mixins
+	------------------------------------------------
+*/
+@mixin animate($attr, $time) {
+    transition: $attr $time ease;
+}
+@mixin transform($val) {
+    transform: $val;
+}

@@ -25,7 +25,7 @@ wp_title();?></title>
 
         <div class="row">
             <div class="col-xs-12">
-                <header class="header-container background-image text-center" style="background-image: url(<?php header_image()?>)">
+                <header class="header-container header-background-image text-center" style="background-image: url(<?php header_image()?>)">
                     <div class="header-content table">
                         <div class="table-cell">
                             <h1 class="site-title sunset-icon">
