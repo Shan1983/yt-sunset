@@ -6,7 +6,7 @@ Error: Undefined variable: "$light-grey".
 25: 
 26: .entry-meta {
 27:     font-size: 13px;
-28:     font-weight: 300;
+28:     font-weight: 200;
 29:     color: $light-grey;
 30:     margin-bottom: 20px;
 31:     a {
@@ -69,4 +69,4 @@ sass/post-formats/standard.scss:29
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$light-grey\".\A         on line 29 of sass/post-formats/standard.scss\A \A 24: }\A 25: \A 26: .entry-meta {\A 27:     font-size: 13px;\A 28:     font-weight: 300;\A 29:     color: $light-grey;\A 30:     margin-bottom: 20px;\A 31:     a {\A 32:         font-weight: 500;\A 33:         color: $light-grey;\A 34:         &:hover,"; }
+  content: "Error: Undefined variable: \"$light-grey\".\A         on line 29 of sass/post-formats/standard.scss\A \A 24: }\A 25: \A 26: .entry-meta {\A 27:     font-size: 13px;\A 28:     font-weight: 200;\A 29:     color: $light-grey;\A 30:     margin-bottom: 20px;\A 31:     a {\A 32:         font-weight: 500;\A 33:         color: $light-grey;\A 34:         &:hover,"; }

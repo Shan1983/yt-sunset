@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,oBAAqB,CACjB,UAAU,CAAE,IAAI,CAChB,kCAAc,CACV,MAAM,CAAE,KAAK,CAEjB,2FAEc,CACV,KAAK,CAAE,IAAI,CACX,iGAAE,CACE,KAAK,CAAE,IAAI,CAGnB,uBAAG,CACC,WAAW,CAAE,IAAI",
+"sources": ["../../sass/post-formats/image.scss"],
+"names": [],
+"file": "image.css"
+}
