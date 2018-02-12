@@ -21,10 +21,9 @@ wp_title();?></title>
 
 <body <?php body_class();?>>
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
-            <div class="col-xs-12">
                 <header class="header-container header-background-image text-center" style="background-image: url(<?php header_image()?>)">
                     <div class="header-content table">
                         <div class="table-cell">
@@ -51,8 +50,6 @@ wp_title();?></title>
                     <!-- nav-container -->
                 </header>
                 <!-- header-container -->
-            </div>
-            <!-- .col-xs-12 -->
         </div>
         <!-- row -->
 

@@ -1,5 +1,7 @@
 article {
-    margin-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &:first-child {padding-top: 80px;}
 }
 
 h1 {
@@ -7,7 +9,7 @@ h1 {
     font-weight: 200;
     &.entry-title {
         line-height: 1.5em;
-        margin: 40px 0 0;
+        margin: 0;
         padding: 0;
         &:before, &:after {
             content: '~';
@@ -51,7 +53,7 @@ h1 {
     }
 }
 .standard-featured {
-    height: 330px;
+    height: 400px;
     display: block;
     position: relative;
     &:after {
