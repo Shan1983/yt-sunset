@@ -1,0 +1,16 @@
+
+.sunset-formats-gallery {
+    header {
+        h1 {
+            &.entry-title {
+                margin-top: 20px;
+            }
+        }
+    }
+    .standard-featured {
+        height: 500px;
+        &:after {
+            background-color: transparent;
+        }
+    }
+}

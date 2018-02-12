@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIY,6CAAc,CACV,UAAU,CAAE,IAAI,CAI5B,0CAAmB,CACf,MAAM,CAAE,KAAK,CACb,gDAAQ,CACJ,gBAAgB,CAAE,WAAW",
+"sources": ["../../sass/post-formats/gallery.scss"],
+"names": [],
+"file": "gallery.css"
+}
