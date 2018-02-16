@@ -450,7 +450,7 @@ function sunset_theme_options()
 function sunset_post_formats()
 {
     $options = get_option('post_formats');
-    $formats = array('aside', 'gallery', 'link', 'image', 'status', 'video', 'audio', 'chat');
+    $formats = array('aside', 'gallery', 'link', 'image', 'status', 'video', 'audio', 'chat' );
     $output = '';
     foreach ($formats as $format) {
         $checked = (@$options[$format] == 1 ? 'checked' : '');

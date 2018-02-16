@@ -122,3 +122,28 @@ function sunset_get_embedded_media($type = array())
     endif;
     return $output;
 }
+
+function sunset_get_bs_slides($attachments) {
+    $count = count($attachments) - 1;
+
+    $output = array();
+
+    for ($i = 0; $i <= $count; $i++) {
+        $active = ($i == 0 ? 'active' : '');
+        $n = ($i == $count ? 0 : $i + 1);
+        $p = ($i == 0 ? $count : $i - 1);
+        $nextImage = wp_get_attachment_thumb_url($attachments[$n]->ID);
+        $prevImage = wp_get_attachment_thumb_url($attachments[$p]->ID);
+
+        $output[$i] = array(
+            'class' => $active,
+            'url' => wp_get_attachment_url($attachments[$i]->ID),
+            'next_image' => $nextImage,
+            'prev_image' => $prevImage,
+            'caption' => $attachments[$i]->post_excerpt,
+        );
+    }
+
+    return $output;
+
+}

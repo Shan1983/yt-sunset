@@ -1,2 +1,98 @@
-.sunset-formats-gallery header h1.entry-title{margin-top:20px}.sunset-formats-gallery .standard-featured{height:500px}.sunset-formats-gallery .standard-featured:after{background-color:transparent}
-/*# sourceMappingURL=gallery.css.map */
+/*
+Error: Undefined mixin 'animate'.
+        on line 31 of sass/post-formats/gallery.scss, in `animate'
+        from line 31 of sass/post-formats/gallery.scss
+
+26:             display: block;
+27:             padding: 20px;
+28:             background-color: rgba(0, 0, 0, 0);
+29:             line-height: 0;
+30:             position: relative;
+31:             @include animate(background-color, 320ms);
+32: 
+33:             .thumbnail-container {
+34:                 position: absolute;
+35:                 display: block;
+36:                 height: 68px;
+
+Backtrace:
+sass/post-formats/gallery.scss:31:in `animate'
+sass/post-formats/gallery.scss:31
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:98:in `with_mixin'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Users/shan/.rvm/gems/ruby-2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'animate'.\A         on line 31 of sass/post-formats/gallery.scss, in `animate'\A         from line 31 of sass/post-formats/gallery.scss\A \A 26:             display: block;\A 27:             padding: 20px;\A 28:             background-color: rgba(0, 0, 0, 0);\A 29:             line-height: 0;\A 30:             position: relative;\A 31:             @include animate(background-color, 320ms);\A 32: \A 33:             .thumbnail-container {\A 34:                 position: absolute;\A 35:                 display: block;\A 36:                 height: 68px;"; }

@@ -1,0 +1,35 @@
+.sunset-formats-status {
+    .quote-content {
+        font-size: 42px;
+        font-weight: 100;
+        line-height: 1.3em;
+        letter-spacing: 0.03em;
+        &:before,
+        &:after {
+            content: '"';
+            display: inline-block;
+            position: relative;
+            color: #ccc;
+            font-weight: 500;
+        }
+    }
+
+    .quote-author {
+        color: #898989;
+        font-size: 12px;
+        margin-bottom: 50px;
+        letter-spacing: 0.09em;
+        &:before,
+        &:after {
+            content: ' - ';
+            display: inline-block;
+            position: relative;
+            color: #ccc;
+            font-weight: 200;
+        }
+    }
+
+    .quote-spacer {
+        margin-bottom: 40px;
+    }
+}
